@@ -18,15 +18,335 @@
     <link href="https://evansblog.barr.rocks//favicon.ico" rel="icon" />
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH9TLBLK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH9TLBLK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 
-<style>
+  <style>
+    body {
+      background: #ececec;
+    }
 
+    body {
+      height: calc(100% - 40px);
+      margin: 0;
+    }
+    html {
+      height: 100%;
+      margin: 0;
+    }
+    #wrapper {
+      min-height: -webkit-calc(100% - 270px);     /* Chrome */
+      min-height: -moz-calc(100% - 270px);     /* Firefox */
+      min-height: calc(100% - 270px);     /* native */
+    }
+    footer {
+      /* bottom: 0; */
+      /* position: fixed; */
+      margin-left: 70px;
+      /* height: 60px; */
+    }
+
+    a {
+      /* transition: .3s color; */
+      color: #3b6caa;
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration:underline
+    }
+
+    .main-header {
+      background: url(https://code.barr.rocks/Cropped.jpg) center / cover no-repeat;
+      /* height: 400px; */
+      height: 180px;
+      margin-top: -40px;
+    }
+    .txt_page-title {
+      padding: 60px;
+      font-size: 50px;
+    }
+    .txt_wh_outline {
+      text-shadow: 2px 2px 0px #FFFFFF;
+    }
+    
+    .main-body {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      padding-left: 16px;
+      padding-right: 16px;
+      max-width: 1400px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .Sidebar {
+      padding-right: 16px !important;
+      display: block;
+      /* width: 260px; (use flex instead) */
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 240px;
+    }
+    .Photo {
+      display: block !important;
+      position: relative !important;
+      width: 245px;
+    }
+    .avatar {
+      display: inline-block;
+      overflow: hidden;
+      line-height: 1;
+      vertical-align: middle;
+      border-radius: 6px; !important;
+      /* width: 100% !important; */
+    }
+    .vcard-details {
+      list-style: none;
+      padding-top: 16px !important;
+      padding-bottom: 16px !important;
+      padding-left: 0px;
+      border-top: 1px #e1e4e8 solid !important;
+      border-color: #eaecef !important;
+    }
+    .vcard-detail {
+      width: 100%;
+      max-width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: top;
+      padding-left: 22px;
+      /* padding-top: 4px !important; */
+      height: 30px;
+      font-size: 14px;
+      text-align: -webkit-match-parent;
+    }
+    .octicon-link {
+        float: left;
+        width: 16px;
+        /* margin-top: 3px; */
+        margin-left: -22px;
+        color: #6a737d;
+        text-align: center;
+        vertical-align: text-bottom;
+        display: inline-block;
+        fill: currentColor;
+    }
+    svg:not(:root) {
+        overflow: hidden;
+    }
+    
+    .ColumnWide {
+      padding-left: 8px; !important;
+      /* width: 75%; */
+      display: block;
+      /* margin-left: 260px; (use flex instead) */
+      flex: 1;
+      min-width: 260px;
+    }
+    .section-header {
+      background-color: #333;
+      text-transform: uppercase;
+      position: relative;
+      margin: 3px;
+      font-size: 16px;
+      font-family: Arial,sans-serif;
+      color: #FFF;
+    }
+    .section-header .title {
+      letter-spacing: 2px;
+      margin-left: 20px;
+      line-height: 40px;
+      vertical-align: bottom;
+    }
+    .project-card {
+      background-color: #fff;
+      /* height: 180px; */
+      /* display: inline-block; */
+      padding-top: 1px;  /* Remove when adding back--> height: 180px; display: inline-block; */
+      margin: 5px 2px 5px 5px;
+    }
+    .card-title {
+      overflow: hidden;
+      font-family: Helvetica, Arial, sans-serif !important;
+      color: #00649c;
+      font-size: 1.25em;
+      font-weight: 200;
+      margin: 10px 15px;
+      border-bottom: double #00649c;
+    }
+    .card-text {
+      overflow: hidden;
+      font-family: Helvetica, Arial, sans-serif !important;
+      margin: 15px;
+    }
+    .card-text h5 {
+      margin-top: 0px;
+      color: #00b1ef;
+      font-size: 1em;
+      font-weight: 100;
+    }
+
+    .SideAdbar {
+      position: absolute;
+      top: 600px;
+      left: 16px;
+      height: 100px;
+      width: 240px;
+    }
+    .adunit {
+      display:block;
+      height: 100px;
+      width: 240px;
+    }
+    @media (max-width: 555px) {
+        .SideAdbar {
+            position: relative;
+            top: 0px;
+        }
+        #wrapper {
+          min-height: 100px;
+        }
+    }
 </style>
-Coming soon...
+</head>
+
+
+<body>
+
+  <div class="main-header">
+    <h1 class="txt_wh_outline txt_page-title">Web pages of Evan Barr</h1>
+  </div>
   
+  <div id="wrapper" class="main-body">
+
+
+		<!-- Sidebar -->
+    <div class="Sidebar" itemscope="" itemtype="http://schema.org/Person">
+    <img class="avatar" src="https://avatars2.githubusercontent.com/u/38681084?s=460&amp;v=4" width="230" height="230" alt="">
+    </div>
+
+
+		<!-- Main -->
+    <div class="ColumnWide">
+
+			<!-- Web Sites -->
+      <div class="section-header">
+        <span class="title">Web Sites</span>
+      </div>
+
+			<!-- Flipit -->
+      <div class="project-card">
+        <div class="card-title">
+					<svg class="octicon-link"><use href="link.svg#icoLink" /></svg>
+          <a href="https://flipit.barr.rocks" target="_blank">
+            Flip.IT puzzle
+          </a>
+          <img src="https://code.barr.rocks/pog_arrow_white.png" alt="logo" style="padding-left: 30px;">
+        </div>
+				
+        <div class="card-text">
+          This daily puzzle can always be solved in three moves.<br>&nbsp;<br>
+          When you click on a piece, it and all the adjacent pieces flip over.  You are trying to get to the image below.
+					Want more?  Click "Random Puzzle" to get a new puzzle that can be solved in three moves.
+          <img src="target.png" alt="layout" style="max-width:100%;padding-left: 30px;"><br>&nbsp;
+        </div>  <!--END: card-text-->
+      </div>  <!--END: project-card-->
+
+			<!-- github -->
+      <div class="project-card">
+        <div class="card-title">
+					<svg class="octicon-link"><use href="link.svg#icoLink" /></svg>
+          <a href="https://code.barr.rocks" target="_blank">
+            List of my featured GitHub projects
+          </a>
+        </div>
+				
+        <div class="card-text">
+        </div>  <!--END: card-text-->
+      </div>  <!--END: project-card-->
+
+			<!-- blog -->
+      <div class="project-card">
+        <div class="card-title">
+					<svg class="octicon-link"><use href="link.svg#icoLink" /></svg>
+          <a href="https://evansblog.barr.rocks" target="_blank">
+            My blog
+          </a>
+        </div>
+				
+        <div class="card-text">
+					These are articles written by me.
+          <ul>
+            <li>Technical articles about programming and computer hardware</li>
+            <li>True stories and poems</li>
+          </ul>
+
+        </div>  <!--END: card-text-->
+      </div>  <!--END: project-card-->
+
+					
+			<!-- Web Pages -->
+      <div class="section-header">
+        <span class="title">Pages at other sites</span>
+      </div>
+    
+			<!-- LinkedIn -->
+      <div class="project-card">
+        <div class="card-title">
+					<svg class="octicon-link"><use href="link.svg#icoLink" /></svg>
+	        <a rel="me author" href="https://www.linkedin.com/in/evanbarr/" target="_blank">Profile</a> on LinkedIn
+        </div>
+				
+        <div class="card-text">
+        </div>  <!--END: card-text-->
+      </div>  <!--END: project-card-->
+    
+			<!-- template -->
+			<!--
+      <div class="project-card">
+        <div class="card-title">
+					<svg class="octicon-link"><use href="link.svg#icoLink" /></svg>
+          <a href="https://<<<<<<<<<<" target="_blank">
+            page title <<<<<<<<<<<
+          </a>
+        </div>
+				
+        <div class="card-text">
+        </div>  <!--END: card-text-->
+      </div>  <!--END: project-card-->
+      -->
+
+
+    </div>  <!--END: ColumnWide-->
+
+    <span id="isblocked" class="SideAdbar" style="display:none;"></span>
+    <span id="SideAdbar" class="SideAdbar">
+      <!-- OnEBGithub -->
+      <!-- Google AdSense - adunit  -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0549784498739741" crossorigin="anonymous" onerror="HasAdblocker()"></script>
+      <ins class="adsbygoogle adunit"
+           data-ad-client="ca-pub-0549784498739741"
+           data-ad-slot="6032186845"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        function HasAdblocker() {
+          var e = document.getElementById('isblocked');
+          e.innerText='If you use an adBlocker, please consider whitelisting this site.  This is my only ad.';
+          e.style.display = "block";
+          document.getElementById('SideAdbar').style.display = "none";
+        }
+      </script>
+    </span>
+
+  
+  </div>  <!--END: wrapper/main-body-->
+
 </body>
 </html>
   
